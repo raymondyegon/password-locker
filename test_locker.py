@@ -1,5 +1,6 @@
 import unittest
 from locker import User
+from locker import Credentials
 
 
 class TestUser(unittest.TestCase):
@@ -44,7 +45,7 @@ class TestUser(unittest.TestCase):
 
     # def test_delete_user(self):
     #     '''
-    #     test_delete_user test case to test if a user can delete 
+    #     test_delete_user test case to test if a user can delete
     #     '''
     #     self.new_user.register_user()
     #     test_user = User("monday", "12345678")
@@ -66,3 +67,25 @@ class TestUser(unittest.TestCase):
         user_exists = User.user_exist("monday")
 
         assert True == user_exists
+
+
+class TestCredentials(unittest.TestCase):
+    '''
+    Test class that defines test cases for the user class.
+    '''
+
+    def setUp(self):
+        self.new_credentials = Credentials("facebook")
+
+    def tearDown(self):
+        '''
+        Teardown method that does clean up after each test case has run
+        '''
+        Credentials.platform = []
+        Credentials.credentials_list = {}
+
+    def test_init(self):
+        '''
+        test_init test case to test if the object is initialized
+        '''
+        assert self.new_credentials.account == "facebook"

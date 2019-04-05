@@ -43,4 +43,15 @@ class User:
             return True
         else :
             return False
-            
+
+
+class Credentials:
+    '''
+    Class that generates new instance of credentials
+    '''
+    credential_list = {}
+    platforms = []
+    
+    def __init__(self, account):
+        self.account = account
+    
