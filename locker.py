@@ -55,3 +55,8 @@ class Credentials:
     def __init__(self, account):
         self.account = account
     
+    def register_platform(self):
+        '''
+         A method to register a new social media account to platforms
+        '''
+        Credentials.platforms.append(self)

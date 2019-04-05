@@ -81,11 +81,20 @@ class TestCredentials(unittest.TestCase):
         '''
         Teardown method that does clean up after each test case has run
         '''
-        Credentials.platform = []
         Credentials.credentials_list = {}
+        Credentials.platforms = []
 
     def test_init(self):
         '''
         test_init test case to test if the object is initialized
         '''
         assert self.new_credentials.account == "facebook"
+
+    def test_register_platform(self):
+        '''
+        test_register_platform to test if a platform is registered
+        '''
+       
+        self.new_credentials.register_platform()
+
+        self.assertEqual(len(Credentials.platforms), 1)
