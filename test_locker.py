@@ -46,3 +46,10 @@ class TestUser(unittest.TestCase):
         '''
         test_delete_user test case to test if a user can delete 
         '''
+        self.new_user.register_user()
+        test_user =  User("monday", "12345678")
+        
+        test_user.register_user()
+        self.new_user.delete_user() # deleting a user 
+        
+        assert len(User.users_list) == 1
