@@ -98,3 +98,14 @@ class TestCredentials(unittest.TestCase):
         self.new_credentials.register_platform()
 
         self.assertEqual(len(Credentials.platforms), 1)
+
+    def test_register_multiple_platforms(self):
+        '''
+        test_register_multiple_platforms to test if multiple platforms can be registered
+        '''
+        self.new_credentials.register_platform()
+        test_platform = Credentials("Instagram")
+        
+        test_platform.register_platform()
+        
+        assert len(Credentials.platforms) == 2
