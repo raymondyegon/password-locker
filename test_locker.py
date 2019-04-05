@@ -109,3 +109,17 @@ class TestCredentials(unittest.TestCase):
         test_platform.register_platform()
         
         assert len(Credentials.platforms) == 2
+    
+    def test_platform_delete(self):
+        '''
+        test_platform_delete to test if a platform can be deleted.
+        '''
+        self.new_credentials.register_platform()
+        test_platform = Credentials("Instagram")
+        
+        test_platform.register_platform()
+        
+        self.new_credentials.delete_platform()
+        
+        assert len(Credentials.platforms) == 1
+        

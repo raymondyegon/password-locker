@@ -60,3 +60,10 @@ class Credentials:
          A method to register a new social media account to platforms
         '''
         Credentials.platforms.append(self)
+    
+    def delete_platform(self):
+        '''
+        A method to delet a social media platform
+        '''
+        
+        Credentials.platforms.remove(self)
