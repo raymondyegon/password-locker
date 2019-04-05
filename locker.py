@@ -10,3 +10,8 @@ class User:
         self.username = username
         self.password = password
     
+    def register_user(self):
+        '''
+        register_user method to register new user to the users_list
+        '''
+        User.users_list.append(self)
