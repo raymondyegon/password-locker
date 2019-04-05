@@ -53,3 +53,14 @@ class TestUser(unittest.TestCase):
         self.new_user.delete_user()  # deleting a user
 
         assert len(User.users_list) == 1
+    
+    def test_user_exist(self):
+        '''
+        test_user_exist test case to return boolean if we cannot find a user
+        '''
+        self.new_user.register_user()
+        test_user = User ("monday", "w12345678")
+        
+        user_exists = User.user_exists("monday")
+        
+        assert user_exists
