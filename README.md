@@ -1,6 +1,6 @@
 # Password Locker
 
-## Built By [Mary Ng'ang'a](https://github.com/marynganga/)
+## Built By [Raymond Yegon](https://github.com/raymondyegon/)
 
 ## Description
 Password Locker is a terminal run python application that allows users to store details i.e. usernames and passwords of their various accounts.
@@ -54,5 +54,5 @@ As a user I would like:
 * Python3.6
 
 ## License
-MIT &copy;2017 [Mary Ng'ang'a](https://github.com/marynganga/)
+MIT &copy;2017 [Raymond Yegon](https://github.com/raymondyegon/)
 
