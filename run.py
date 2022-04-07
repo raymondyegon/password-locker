@@ -6,8 +6,7 @@ def create_user(fname,lname,password):
 	'''
 	Function to create a new user account
 	'''
-	new_user = User(fname,lname,password)
-	return new_user
+	return User(fname,lname,password)
 
 def save_user(user):
 	'''
@@ -20,22 +19,19 @@ def verify_user(first_name,password):
 	'''
 	Function that verifies the existance of the user before creating credentials
 	'''
-	checking_user = Credential.check_user(first_name,password)
-	return checking_user
+	return Credential.check_user(first_name,password)
 
 def generate_password():
 	'''
 	Function to generate a password automatically
 	'''
-	gen_pass = Credential.generate_password()
-	return gen_pass
+	return Credential.generate_password()
 
 def create_credential(user_name,site_name,account_name,password):
 	'''
 	Function to create a new credential
 	'''
-	new_credential=Credential(user_name,site_name,account_name,password)
-	return new_credential
+	return Credential(user_name,site_name,account_name,password)
 
 def save_credential(credential):
 	'''
@@ -129,11 +125,10 @@ def main():
 							print(' ')
 							for credential in display_credentials(user_name):
 								print(f'Site Name: {credential.site_name} - Account Name: {credential.account_name} - Password: {credential.password}')
-							print(' ')	
 						else:
 							print(' ')
 							print("You don't seem to have any credentials saved yet")
-							print(' ')
+						print(' ')
 					elif short_code == 'copy':
 						print(' ')
 						chosen_site = input('Enter the site name for the credential password to copy: ')
@@ -145,7 +140,7 @@ def main():
 			else: 
 				print(' ')
 				print('Oops! Wrong details entered. Try again or Create an Account.')		
-		
+
 		else:
 			print("-"*60)
 			print(' ')
